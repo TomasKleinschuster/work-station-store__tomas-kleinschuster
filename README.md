@@ -1,2 +1,2 @@
-# Work-Station-Store__Tom-s-Kleinschuster
+# Work Station Store
 CoderHouse e-commerce Project made with React.js
