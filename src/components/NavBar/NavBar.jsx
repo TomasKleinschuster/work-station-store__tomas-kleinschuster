@@ -14,7 +14,9 @@ export default function NavBar() {
       <header className="flex justify-between w-screen top-0 h-16 bg-gray-900 text-white shadow-lg">
         <div className="flex flex-row items-center">
           <RiComputerLine className="navbar-icon" />
-          <p className="px-1 text-2xl font-bold text-white tracking-wide underline decoration-3 decoration-blue-600">WorkStation</p>
+          <p className="px-1 text-2xl font-bold text-white tracking-wide underline decoration-3 decoration-blue-600">
+            WorkStation
+          </p>
         </div>
         <nav className="flex flex-row justify-between">
           <RiSearchLine className="navbar-icon" />
