@@ -3,10 +3,10 @@ import {
   RiComputerLine,
   RiNotification2Line,
   RiUser3Line,
-  RiSearchLine,
   RiChat3Line,
 } from "react-icons/ri";
 import CartWidget from "./CartWidget";
+import SearchWidget from "./SearchWidget";
 
 function NavBar() {
   return (
@@ -14,12 +14,12 @@ function NavBar() {
       <header className="flex justify-between w-screen top-0 h-16 bg-gray-900 text-white shadow-lg">
         <div className="flex flex-row items-center">
           <RiComputerLine className="navbar-icon" />
-          <p className="px-1 text-2xl font-bold text-white tracking-wide underline decoration-3 decoration-blue-600 select-none">
+          <p className="navbar-title">
             WorkStationStore
           </p>
         </div>
         <nav className="flex flex-row justify-between">
-          <RiSearchLine className="navbar-icon" />
+          <SearchWidget />
           <CartWidget />
           <RiChat3Line className="navbar-icon" />
           <RiNotification2Line className="navbar-icon" />
