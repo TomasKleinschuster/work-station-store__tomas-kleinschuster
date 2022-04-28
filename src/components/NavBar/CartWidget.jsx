@@ -1,8 +1,8 @@
 import React from "react";
-import { RiStore2Line } from "react-icons/ri";
+import { RiShoppingCartFill } from "react-icons/ri";
 
 function CartWidget() {
-  return <RiStore2Line className="navbar-icon" />;
+  return <RiShoppingCartFill className="navbar-icon" />;
 }
 
 export default CartWidget;

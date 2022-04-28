@@ -1,14 +1,29 @@
-import React from "react";
-import ItemCount from "../Buttons/ItemCount";
+import React, { useEffect, useState } from "react";
 import ButtonCounter from "../Buttons/ButtonCounter";
+import ItemList from "../ItemList/ItemList";
+import getItemListData from "../../Services/getItemListData";
 
 function ItemListContainer({ greeting }) {
+  const [products, setProducts] = useState([]);
+  console.log("Products before promise ", products);
+
+  useEffect(() => {
+    getItemListData
+      .then((res) => setProducts(res))
+      .catch((err) => console.log("error: ", err));
+  }, []);
+
   return (
-    <div className="flex flex-col items-center h-auto text-center my-4 font-extrabold text-3xl text-white">
-      {greeting}
-      <div className="box-item"></div>
-      <ItemCount stock={10} initial={1} />
-      <ButtonCounter title="Number of clicks: " classText="button-test" />
+    <div className="itemListContainer-container">
+      <h1 className="font-extrabold text-3xl text-white my-4">{greeting}</h1>
+      <ItemList products={products} />
+      <ButtonCounter title="Number of clicks: " classText="buttonCounter" />
+      <div className="w-10 h-10 bg-blue-600"></div>
+      <div className="w-10 h-10 bg-black"></div>
+      <div className="w-10 h-10 bg-gray-900"></div>
+      <div className="w-10 h-10 bg-gray-800"></div>
+      <div className="w-10 h-10 bg-gray-600"></div>
+      <div className="w-10 h-10 bg-white"></div>
     </div>
   );
 }

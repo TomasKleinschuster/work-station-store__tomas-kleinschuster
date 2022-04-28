@@ -6,9 +6,9 @@ const ButtonCounter = ({ title, classText }) => {
   const [count, setCount] = useState(0);
 
   return (
-    <button onClick={() => setCount(count + 1)} className={classText}>
-      {title} {count}
-    </button>
+      <button onClick={() => setCount(count + 1)} className={classText}>
+        {title} {count}
+      </button>
   );
 };
 

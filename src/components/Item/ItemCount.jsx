@@ -5,20 +5,20 @@ const ItemCount = ({ stock, initial }) => {
   const [count, setCount] = useState(initial);
 
   return (
-    <div>
-      <div className="item-count">
-        <RiAddCircleLine
-          className="ar-button"
-          onClick={() => (count < stock ? setCount(count + 1) : "")}
+    <>
+      <div className="container_minus-plus">
+        <RiIndeterminateCircleLine
+          className="button_minus-plus"
+          onClick={() => (count > initial ? setCount(count - 1) : "")}
         />
         <span className="select-none text-xl">{count}</span>
-        <RiIndeterminateCircleLine
-          className="ar-button"
-          onClick={() => (count > initial ? setCount(count - 1) : "")}
+        <RiAddCircleLine
+          className="button_minus-plus"
+          onClick={() => (count < stock ? setCount(count + 1) : "")}
         />
       </div>
       <button
-        className="add-cart_button"
+        className="button_addToCart"
         onClick={() =>
           alert(
             count > 1
@@ -29,7 +29,7 @@ const ItemCount = ({ stock, initial }) => {
       >
         Add to cart
       </button>
-    </div>
+    </>
   );
 };
 
