@@ -1,7 +1,5 @@
 import React from "react";
-import {
-    RiSearchLine,
-  } from "react-icons/ri";
+import { RiSearchLine } from "react-icons/ri";
 
 const SearchWidget = () => {
   return (

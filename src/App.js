@@ -1,12 +1,14 @@
 import React from "react";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
-    <div className="w-screen h-auto bg-gray-600 back">
+    <div className="w-auto min-h-screen h-full bg-gray-600">
       <NavBar />
       <ItemListContainer greeting="Welcome!" />
+      <ItemDetailContainer />
     </div>
   );
 }

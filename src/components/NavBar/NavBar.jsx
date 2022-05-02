@@ -5,19 +5,17 @@ import SearchWidget from "./SearchWidget";
 
 function NavBar() {
   return (
-    <div>
-      <header className="flex justify-between w-screen top-0 h-16 bg-gray-900 text-white shadow-lg">
-        <div className="flex flex-row items-center">
-          <RiComputerLine className="navbar-icon" />
-          <p className="navbar-title">WorkStation Store</p>
-        </div>
-        <nav className="flex flex-row justify-between">
-          <SearchWidget />
-          <CartWidget />
-          <RiChatSmile3Line className="navbar-icon" />
-          <RiUser3Line className="navbar-icon" />
-        </nav>
-      </header>
+    <div className="flex justify-between w-auto top-0 h-16 bg-gray-900 text-white shadow-xl shadow-zinc-900">
+      <div className="flex flex-row items-center">
+        <RiComputerLine className="navbar-icon" />
+        <p className="navbar-title">WorkStation Store</p>
+      </div>
+      <nav className="flex flex-row justify-between">
+        <SearchWidget />
+        <CartWidget />
+        <RiChatSmile3Line className="navbar-icon" />
+        <RiUser3Line className="navbar-icon" />
+      </nav>
     </div>
   );
 }

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @layer components {
-  /* NavBar Style */
+  /* NavBar */
   .navbar-icon {
-    @apply relative flex items-center justify-center
+    @apply relative flex items-center justify-center z-10
         h-12 w-12 my-auto mx-2 px-3 shadow-lg
         bg-gray-800 text-blue-600
-        hover:bg-blue-600 hover:text-white hover:px-2
-        rounded-3xl hover:rounded-xl
+        hover:bg-blue-700 hover:text-white hover:px-2
+        rounded-3xl hover:rounded-md
         transition-all duration-100 ease-linear
         cursor-pointer;
   }
@@ -20,23 +20,22 @@
   }
 
   .search-input {
-    @apply absolute top-4 right-80 
-        w-44 h-5 py-4 px-2
+    @apply absolute top-4 right-56 z-0
+        w-72 h-5 py-4 px-2
         font-sans text-base
-        bg-gray-500 text-gray-800
+        bg-gray-600 text-gray-900
         rounded
-        focus:outline-none focus:bg-white
-        hidden;
+        focus:outline-none focus:bg-gray-400;
   }
 
   /* ItemListContainer Container */
   .itemListContainer-container {
-    @apply flex flex-col items-center;
+    @apply flex flex-col items-center w-auto h-auto;
   }
 
   /* ItemList Container */
   .itemList-container {
-    @apply grid gap-4 grid-cols-4;
+    @apply grid gap-8 grid-cols-4 my-4;
   }
 
   /* Item Container */
@@ -44,9 +43,10 @@
     @apply flex flex-col justify-between
         text-center
         bg-white text-gray-900
+        shadow-xl shadow-zinc-900
         text-base font-semibold
         w-72 p-4 
-        rounded;
+        border-2 border-gray-800 rounded;
   }
   /* ItemCount Elements */
   .container_minus-plus {
