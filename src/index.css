@@ -20,12 +20,19 @@
   }
 
   .search-input {
-    @apply absolute top-4 right-56 z-0
+    @apply absolute top-4 right-72 z-0
         w-72 h-5 py-4 px-2
         font-sans text-base
         bg-gray-600 text-gray-900
         rounded
         focus:outline-none focus:bg-gray-400;
+  }
+
+  .categoryActive {
+    @apply text-white;
+  }
+  .categoryOff {
+    @apply text-black;
   }
 
   /* ItemListContainer Container */

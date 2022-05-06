@@ -3,10 +3,14 @@ import React from "react";
 const ItemDetail = ({ detail }) => {
   return (
     <div className="flex flex-row justify-center items-center w-2/3 my-4">
-      <div className="flex flex-col w-1/2 justify-center items-center border-2 rounded border-gray-800 bg-white">
-        <img src={detail.imageURL} alt="" className="object-fill h-72" />
+      <div className="flex flex-col w-1/2 justify-center items-center">
+        <img
+          src={detail.imageURL}
+          alt=""
+          className="object-contain h-72 p-4 border-2 rounded border-gray-800 bg-white"
+        />
       </div>
-      <div className="flex flex-col w-1/2 h-80 justify-evenly items-left text-left px-4">
+      <div className="flex flex-col w-1/2 h-72 justify-evenly items-left text-left px-4">
         <span className="text-2xl font-bold">{detail.title}</span>
         <span className="flex flex-row items-center text-base font-semibold text-white">
           Category:{" "}

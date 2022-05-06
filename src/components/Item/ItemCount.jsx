@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RiAddCircleLine, RiIndeterminateCircleLine } from "react-icons/ri";
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   return (
