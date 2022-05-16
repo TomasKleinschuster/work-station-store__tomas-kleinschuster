@@ -5,7 +5,7 @@ import CartWidget from "./CartWidget";
 import CategoryWidget from "./CategoryWidget";
 import SearchWidget from "./SearchWidget";
 
-function NavBar() {
+const NavBar = () => {
   return (
     <div className="flex justify-between w-auto top-0 h-16 bg-gray-900 text-white shadow-xl shadow-zinc-900">
       <div className="flex flex-row items-center">
@@ -29,6 +29,6 @@ function NavBar() {
       </nav>
     </div>
   );
-}
+};
 
 export default NavBar;

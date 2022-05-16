@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import CartContext from "../../Context/cartContext";
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ detail }) => {
+  const [productsQuantity, setProductsQuantity] = useState(null);
+  const myCartContext = useContext(CartContext);
+
+  const addHandler = (quantityToAdd) => {
+    myCartContext.addProduct(detail);
+  };
+
   return (
     <div className="flex flex-row justify-center items-center w-2/3 my-4">
       <div className="flex flex-col w-1/2 justify-center items-center">
@@ -44,6 +54,13 @@ const ItemDetail = ({ detail }) => {
             {detail.stock}
           </span>
         </span>
+        {myCartContext.products.length ? (
+          <button onClick={() => console.log(myCartContext)}>
+            <Link to="/cart">Checkout ({productsQuantity} products)</Link>
+          </button>
+        ) : (
+          <ItemCount stock={detail.stock} initial={1} onAdd={addHandler} />
+        )}
       </div>
     </div>
   );

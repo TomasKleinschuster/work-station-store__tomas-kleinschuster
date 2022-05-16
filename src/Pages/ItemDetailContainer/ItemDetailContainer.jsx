@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
+import CartContext from "../../Context/cartContext";
 
 const getItemDetailData = (id) => {
   const detailPromise = new Promise((resolve) => {
@@ -117,6 +118,11 @@ const getItemDetailData = (id) => {
 const ItemDetailContainer = () => {
   const [detail, setDetail] = useState({});
   const { id } = useParams();
+  const myCartContext = useContext(CartContext);
+
+  useEffect(() => {
+    console.log(myCartContext);
+  }, [myCartContext]);
 
   useEffect(() => {
     getItemDetailData(id)

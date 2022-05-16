@@ -115,16 +115,21 @@ const getProducts = (category) => {
   return productsPromise;
 };
 
-function ItemListContainer({ greeting }) {
+const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
   const { categoryId } = useParams();
+  // const myCartContext = useContext(CartContext);
+
+  // useEffect(() => {
+  //   console.log(myCartContext.product);
+  // }, []); // Array de dependencia vacio para que se ejecute solamente al inicio del componente
 
   useEffect(() => {
     console.log(categoryId);
     getProducts(categoryId)
       .then((res) => setProducts(res))
       .catch((err) => console.log("error: ", err));
-  }, [categoryId]); // Array de dependencia vacio para que se ejecute solamente al inicio del componente
+  }, [categoryId]);
 
   return (
     <div className="itemListContainer-container">
@@ -135,6 +140,6 @@ function ItemListContainer({ greeting }) {
       <ButtonCounter title="Number of clicks: " classText="buttonCounter" />
     </div>
   );
-}
+};
 
 export default ItemListContainer;
